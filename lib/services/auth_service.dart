@@ -2,9 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:logger/logger.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AuthService {
-  final String baseUrl = "http://100.86.113.25:8001";
+  final String baseUrl = dotenv.get('BACKEND_URL');
   final logger = Logger();
 
   Future<bool> login(String email, String password) async {

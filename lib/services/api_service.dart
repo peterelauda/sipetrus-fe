@@ -29,11 +29,11 @@ class ApiService {
     // final String authKey = dotenv.get('TS_AUTH_KEY');
 
     try {
-      print("Memulai koneksi Tailscale internal...");
+      print("Starting an internal Tailscale connection...");
 
-      print("Koneksi Tailscale Berhasil.");
+      print("Tailscale Connection Successful!");
     } catch (e) {
-      print("Gagal inisialisasi Tailscale: $e");
+      print("Tailscale initialization failed: $e");
     }
   }
 
